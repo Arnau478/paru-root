@@ -1057,9 +1057,9 @@ impl Installer {
         cache: &Cache,
         actions: &mut Actions<'_>,
     ) -> Result<()> {
-        if !actions.build.is_empty() && nix::unistd::getuid().is_root() {
-            bail!(tr!("can't install AUR package as root"));
-        }
+        //if !actions.build.is_empty() && nix::unistd::getuid().is_root() {
+        //    bail!(tr!("can't install AUR package as root"));
+        //}
         if !actions.build.is_empty() && config.args.has_arg("w", "downloadonly") {
             bail!(tr!("--downloadonly can't be used for AUR packages"));
         }
